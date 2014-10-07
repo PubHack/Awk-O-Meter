@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>Awk-O-Meter</title>
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="styles.css" type="text/css" />
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+</head>
+<body>
+
+	<div id="getLocation">
+		<!-- <h1>Begin Awks reading...</h1> -->
+	</div>
+
+	<h1 id="showStatus">Getting location...</h1>
+
+	<div id="displayReading">
+
+		<h1>CURRENT AWKS LEVEL</h1>
+
+		<div id="reading">
+
+			<div id="meter">
+				<div id="info">
+					<h1 id="rating">10</h1>
+					<p id="status">STATUS: DANGER</p>
+					<p id="action">ACTION: EVACUATE</p>
+				</div>
+
+				<div id="meterGraphic">
+					<div id="meterReading">
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+		<div id="recordedSituations">
+			<h1>RECORDED SITUATIONS</h1>
+
+			<ul id="situationHolder">
+
+				<!--<li class="aSituation">
+					<p>Looked Jon directly in the eye</p>
+					<a>8</a>
+				</li>
+
+				<li class="aSituation">
+					<p>Ordered a pint of Pepsi but was given coke</p>
+					<a>5</a>
+				</li>
+
+				<li class="aSituation">
+					<p>Looked Jon directly in the eye</p>
+					<a>8</a>
+				</li>
+
+				<li class="aSituation">
+					<p>Ordered a pint of Pepsi but was given coke</p>
+					<a>5</a>
+				</li>
+
+				<li class="aSituation">
+					<p>Looked Jon directly in the eye</p>
+					<a>8</a>
+				</li>
+
+				<li class="aSituation">
+					<p>Ordered a pint of Pepsi but was given coke</p>
+					<a>5</a>
+				</li>
+
+				<li class="aSituation">
+					<p>Looked Jon directly in the eye</p>
+					<a>8</a>
+				</li>
+
+				<li class="aSituation">
+					<p>Ordered a pint of Pepsi but was given coke</p>
+					<a>5</a>
+				</li>-->
+
+			</ul>
+
+		</div>
+
+	</div>
+
+	<div id="newSituationButton">
+		<h1>ADD NEW SITUATION</h1>
+	</div>
+
+	<div id="newSituationOverlay" data-display="false">
+		<h1>NEW SITUATION</h1>
+		<div id="closeNewSit">X</div>
+		<form id="newSit">
+			<input type="text" placeholder="Describe the situation" id="currentDescription">
+			<p>HOW AWKWARD DO YOU FEEL?</p>
+			<input type="range" min="0" max="10" value="5" id="howAwks">
+			<button type="submit">NOTIFY OF AWKWARDNESS</button>
+		</form>
+	</div>
+
+	<audio loop id="geiger">
+		<source src="/assets/sounds/geiger.ogg" type="audio/ogg">
+		<source src="/assets/sounds/geiger.mp3" type="audio/mpeg">
+	</audio>
+
+	<audio id="alarm">
+		<source src="/assets/sounds/redalert.ogg" type="audio/ogg">
+		<source src="/assets/sounds/redalert.mp3" type="audio/mpeg">
+	</audio>
+
+	
+
+<script src="scripts/libraries/maths.js"></script>
+<script src="scripts/libraries/jquery.js"></script>
+<script src="scripts/core.js"></script>
+</body>
+</html>
